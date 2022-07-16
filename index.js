@@ -1,5 +1,6 @@
 const { application } = require("express")
 const express = require("express")
+const format = require('date-format')
 
 const app = express()
 
@@ -21,7 +22,7 @@ app.get('/api/v1/instagram', (req, res) => {
         username: "_chandan__rout",
         followers: 90,
         following: 88,
-        date: Date.now() 
+        date: format.asString('dd/mm/yy hh:mm:ss', new Date()) 
     }
     res.status(200).json(instagramData)
 })
@@ -35,7 +36,7 @@ app.get('/api/v1/linkedin', (req, res) => {
         api: "Linkedin API",
         username: "chandan632",
         connection: 208,
-        date: Date.now() 
+        date: format.asString('dd/mm/yy hh:mm:ss', new Date()) 
     }
     res.status(200).json(instagramData)
 })
@@ -48,6 +49,7 @@ app.get('/api/v1/linkedin', (req, res) => {
 app.get('/api/v1/:token', (req, res) => {
     res.status(200).json({
         token: req.params.token,
+        date: format.asString('dd/mm/yy hh:mm:ss', new Date()),
         msg: "Record retrieved successfully!"
     })
 })
