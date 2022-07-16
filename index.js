@@ -27,6 +27,20 @@ app.get('/api/v1/instagram', (req, res) => {
 })
 
 /*
+  @auther Chandan Rout
+  @return Linkedin data of User
+*/
+app.get('/api/v1/linkedin', (req, res) => {
+    const instagramData = {
+        api: "Linkedin API",
+        username: "chandan632",
+        connection: 208,
+        date: Date.now() 
+    }
+    res.status(200).json(instagramData)
+})
+
+/*
  @auther Chandan Rout
  @param Token -> Token is whatever user typed after /api/v1/
  @return Json data -> Whatever user typed server send it's back
