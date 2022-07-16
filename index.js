@@ -12,6 +12,7 @@ app.get('/', (req, res) => {
 })
 
 /*
+ @auther Chandan Rout
  @param Token -> Token is whatever user typed after /api/v1/
  @return Json data -> Whatever user typed server send it's back
 */
@@ -23,6 +24,7 @@ app.get('/api/v1/:token', (req, res) => {
 })
 
 /*
+  @auther Chandan Rout
   @return Instagram data of User
 */
 app.get('api/v1/instagram', (req, res) => {
