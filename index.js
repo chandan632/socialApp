@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
   @auther Chandan Rout
   @return Instagram data of User
 */
-app.get('api/v1/instagram', (req, res) => {
+app.get('/api/v1/instagram', (req, res) => {
     const instagramData = {
         api: "Instagram API",
         username: "_chandan__rout",
